@@ -33,5 +33,5 @@ feature_importances = list(tree.feature_importances_)
 # 2 столбца, влияющие больше всего на итоговый результат
 ind1 = tree.feature_importances_.argsort()[-2]
 ind2 = tree.feature_importances_.argsort()[-1]
-print()
+
 create_answer_file('w1_7.txt', f'{props_columns[ind1]} {props_columns[ind2]}')
