@@ -5,7 +5,6 @@ import pandas
 from source.utils import create_answer_file
 
 data = pandas.read_csv(r'..\data\titanic.csv', index_col='PassengerId')
-
 group = data.groupby('Sex').Sex.agg([len])
 
 # Какое количество мужчин и женщин ехало на корабле?
@@ -39,4 +38,5 @@ for n in list(data.Name):
             pass
     elif 'Miss' in n:
         names.append(n.split(' ')[2])
+
 create_answer_file('w1_6.txt', Counter(names).most_common(1)[0][0])
