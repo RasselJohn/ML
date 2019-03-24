@@ -1,3 +1,7 @@
+# Обучение без учителя
+# Кластеризация
+# Алгоритм KMeans
+
 import numpy as np
 import pandas
 from skimage import img_as_float

@@ -1,3 +1,8 @@
+# Линейные методы регрессии
+# Гребневая регрессия
+# Корректировка данных
+# Числовое представление слов
+
 import pandas
 from scipy.sparse import hstack
 from sklearn.feature_extraction import DictVectorizer

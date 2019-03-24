@@ -1,4 +1,6 @@
-import numpy as np
+# Метрики качества классификации
+# Доля правильных ответов, точность, полнота, F-мера
+
 import pandas
 from sklearn import metrics as mt
 from source import create_answer_file
@@ -20,9 +22,16 @@ FN = len(data.loc[(data['true'] == 1) & (data['pred'] == 0)])
 TN = len(data.loc[(data['true'] == 0) & (data['pred'] == 0)])
 create_answer_file('w3_4.txt', f'{TP} {FP} {FN} {TN}')
 
+# доля правильных ответов
 accuracy_score = round(mt.accuracy_score(data['true'], data['pred']), 3)
+
+# точность
 precision_score = round(mt.precision_score(data['true'], data['pred']), 3)
+
+# полнота
 recall_score = round(mt.recall_score(data['true'], data['pred']), 3)
+
+# F-мера
 f1_score = round(mt.f1_score(data['true'], data['pred']), 3)
 
 create_answer_file('w3_5.txt', f'{accuracy_score} {precision_score} {recall_score} {f1_score}')

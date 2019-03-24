@@ -1,3 +1,8 @@
+# Линейные методы классификации
+# Персептрон
+# Метрики качества
+# Стандартизация признаков
+
 import pandas
 from sklearn.linear_model import Perceptron
 from sklearn.metrics import accuracy_score
@@ -5,10 +10,8 @@ from sklearn.preprocessing import StandardScaler
 
 from source import create_answer_file
 
-data_train = pandas.read_csv(r'..\data\perceptron-train.csv',
-                             names=['result', 'p1', 'p2'])
-data_test = pandas.read_csv(r'..\data\perceptron-test.csv',
-                            names=['result', 'p1', 'p2'])
+data_train = pandas.read_csv(r'..\data\perceptron-train.csv', names=['result', 'p1', 'p2'])
+data_test = pandas.read_csv(r'..\data\perceptron-test.csv', names=['result', 'p1', 'p2'])
 
 y_train = data_train['result']
 X_train = data_train[['p1', 'p2']]

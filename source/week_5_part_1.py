@@ -1,3 +1,7 @@
+# Композиция алгоритмов
+# Случайный лес
+# Регрессия
+
 import pandas
 from sklearn.ensemble import RandomForestRegressor
 from sklearn.model_selection import KFold, cross_val_score

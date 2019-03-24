@@ -1,10 +1,12 @@
+# Линейные методы классификации
+# Метод опорных векторов
+
 import pandas
 from sklearn.svm import SVC
 
 from source import create_answer_file
 
-data_train = pandas.read_csv(r'..\data\svm.csv',
-                             names=['result', 'p1', 'p2'])
+data_train = pandas.read_csv(r'..\data\svm.csv', names=['result', 'p1', 'p2'])
 
 y_train = data_train['result']
 X_train = data_train[['p1', 'p2']]

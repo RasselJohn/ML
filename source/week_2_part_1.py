@@ -1,3 +1,8 @@
+# Метрические методы классификации
+# Метод ближайших соседей
+# Кросс-валидация(разбиение)
+# Маштабирование признаков
+
 import pandas
 from sklearn.model_selection import KFold, cross_val_score
 from sklearn.neighbors import KNeighborsClassifier

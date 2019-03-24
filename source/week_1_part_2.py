@@ -1,3 +1,8 @@
+# Логические методы классификации
+# Решающие деревья
+# Получение важности каждого из столбцов
+# Замена строковых значений на числа
+
 import pandas
 from sklearn.tree import DecisionTreeClassifier
 from sklearn.preprocessing import LabelEncoder

@@ -1,3 +1,4 @@
+# Обзор основных возможностей pandas
 from collections import Counter
 
 import pandas

@@ -1,3 +1,7 @@
+# Понижение размерности
+# Уменьшение количества признаков
+# Метод главных компонент
+
 import numpy as np
 import pandas
 from sklearn.decomposition import PCA
@@ -8,6 +12,7 @@ train_data = pandas.read_csv(r'..\data\close_prices.csv')
 train_data_2 = pandas.read_csv(r'..\data\djia_index.csv')
 del train_data['date']
 
+# Метод главных компонент
 pca = PCA(n_components=10)
 pca.fit(train_data)
 
@@ -21,6 +26,7 @@ for index, val in enumerate(pca.explained_variance_ratio_):
         break
 
 x = pca.transform(train_data)
+
 # получение коэфф. Пирсона
 coeff = np.corrcoef(x[:, 0], train_data_2['^DJI'])[0, 1]
 company_name = train_data.columns[np.argmax(pca.components_[0])]

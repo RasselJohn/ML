@@ -1,3 +1,7 @@
+# Композиция алгоритмов
+# Градиентный бустинг
+# Подбор гиперпараметров
+
 import matplotlib.pyplot as plot
 import numpy as np
 import pandas

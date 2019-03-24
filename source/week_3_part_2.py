@@ -1,15 +1,17 @@
-import numpy as np
+# Линейные методы классификации
+# Метод опорных векторов
+# Анализ текста
+# Замена строковых значений на числа
 
+import numpy as np
 from sklearn import datasets
 from sklearn.model_selection import KFold, GridSearchCV
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.svm import SVC
+
 from source import create_answer_file
 
-newsgroups = datasets.fetch_20newsgroups(
-    subset='all',
-    categories=['alt.atheism', 'sci.space']
-)
+newsgroups = datasets.fetch_20newsgroups(subset='all', categories=['alt.atheism', 'sci.space'])
 
 # числовое представление слов методом TF-IDF
 vector = TfidfVectorizer()
@@ -29,8 +31,7 @@ clf2.fit(vector_fit, newsgroups.target)
 
 # какие слова встречаются чаще в 2-х заданных темах
 result = [
-    vector_mapping[r] for r in
-    (np.absolute(clf2.coef_.toarray()[0]).argsort()[-10:][::-1])
+    vector_mapping[r] for r in (np.absolute(clf2.coef_.toarray()[0]).argsort()[-10:][::-1])
 ]
 result.sort()
 

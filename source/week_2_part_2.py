@@ -1,3 +1,8 @@
+# Метрические методы классификации
+# Метод ближайших соседей(регрессия)
+# Кросс-валидация(разбиение)
+# Маштабирование признаков
+
 import numpy as np
 from sklearn.datasets import load_boston
 from sklearn.model_selection import KFold, cross_val_score

@@ -1,3 +1,8 @@
+# Линейные методы классификации
+# Логистическая регрессия(Оценивает вероятности принадлежности объектов к классам)
+# Градиентный спуск
+# Метрики качества
+
 import numpy as np
 import pandas
 from sklearn.metrics import roc_auc_score
@@ -35,8 +40,7 @@ def get_roc_auc_score(X, y, C):
     return round(roc_auc_score(y, 1 / (1 + np.exp(-w1 * X['p1'] - w2 * X['p2']))), 3)
 
 
-data = pandas.read_csv(r'..\data\data-logistic.csv',
-                       names=['result', 'p1', 'p2'])
+data = pandas.read_csv(r'..\data\data-logistic.csv', names=['result', 'p1', 'p2'])
 y = data['result']
 X = data[['p1', 'p2']]
 
