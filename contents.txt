@@ -82,6 +82,5 @@ Week 6
 Examples:
 week_6_part_1 - Обучение без учителя; Кластеризация; Алгоритм KMeans
 
-
-
-
+Week 7
+- Проект "Moba"

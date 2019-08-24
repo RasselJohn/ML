@@ -20,6 +20,7 @@ y_test = data_test['result']
 X_test = data_test[['p1', 'p2']]
 
 clf_train = Perceptron(random_state=241)
+
 # обучение персептрона
 clf_train.fit(X_train, y_train)
 predictions_train = clf_train.predict(X_test)
