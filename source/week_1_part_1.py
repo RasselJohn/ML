@@ -18,8 +18,10 @@ create_answer_file('w1_1.txt', f'{group.len.male} {group.len.female}')
 create_answer_file('w1_2.txt', f'{round(data.sum().Survived / len(data) * 100, 2)}')
 
 # Какую долю пассажиры первого класса составляли среди всех пассажиров?
-create_answer_file('w1_3.txt',
-                   f'{round((data.groupby("Pclass").Pclass.agg([len]).len[1]) / len(data) * 100, 2)}')
+create_answer_file(
+    'w1_3.txt',
+    f'{round((data.groupby("Pclass").Pclass.agg([len]).len[1]) / len(data) * 100, 2)}'
+)
 
 # Какого возраста были пассажиры? Посчитайте среднее и медиану возраста пассажиров.
 create_answer_file('w1_4.txt', f'{round(data.Age.mean(), 2)} {round(data.Age.median(), 2)}')
@@ -31,8 +33,8 @@ create_answer_file('w1_5.txt', f'{data.SibSp.corr(data.Parch)}')
 # Какое самое популярное женское имя на корабле?
 # Извлеките из полного имени пассажира (колонка Name) его личное имя (First Name).
 names = []
-for n in list(data.Name):
-    if ('Mrs.') in n:
+for n in data.Name:
+    if 'Mrs.' in n:
         try:
             names.append(n.split('(')[1])
         except IndexError:
