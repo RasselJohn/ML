@@ -38,4 +38,4 @@ clf_test.fit(X_train_scaled, y_train)
 predictions_test = clf_test.predict(X_test_scaled)
 acc_score_test = accuracy_score(y_test, predictions_test)
 
-create_answer_file('w2_6.txt', f'{round(acc_score_test - acc_score_train,3)}')
+create_answer_file('w2_6.txt', f'{round(acc_score_test - acc_score_train, 3)}')

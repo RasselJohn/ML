@@ -70,5 +70,6 @@ create_answer_file('w5_3.txt', '{:0.2f} {}'.format(min_loss_value, min_loss_inde
 # достигается наилучшее качество у градиентного бустинга
 model = RandomForestClassifier(n_estimators=min_loss_index, random_state=241)
 model.fit(X_train, y_train)
+
 test_loss = log_loss(y_test, model.predict_proba(X_test)[:, 1])
 create_answer_file('w5_4.txt', f'{test_loss}')

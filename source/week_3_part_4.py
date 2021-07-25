@@ -53,4 +53,3 @@ curves = {
 }
 
 create_answer_file('w3_7.txt', f'{max(curves, key=curves.get)}')
-pass

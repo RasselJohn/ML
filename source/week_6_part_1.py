@@ -7,6 +7,7 @@ import pandas
 from skimage import img_as_float
 from skimage.io import imread, imsave
 from sklearn.cluster import KMeans
+
 from source import create_answer_file
 
 # получение и преобразование изображения(все значения в интервал от 0 до 1)
