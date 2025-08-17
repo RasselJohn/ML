@@ -1,4 +1,4 @@
-tMachine Learning
+Machine Learning
 =================
 
 Solved exercises of Coursera's course "Введение в машинное обучение"
